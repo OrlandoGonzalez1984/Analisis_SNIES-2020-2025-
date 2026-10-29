@@ -1,7 +1,7 @@
 import streamlit as st
 import base64
 import pandas as pd
-import matplotlib.pyplot as plt
+import mathplotlib.pyplot as plt
 import streamlit.components.v1 as components
 from scipy.io import arff
 from pathlib import Path
