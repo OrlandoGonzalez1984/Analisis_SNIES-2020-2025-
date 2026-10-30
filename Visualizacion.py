@@ -65,8 +65,9 @@ st.markdown(
     /*para los demás textos*/
     p {color: #000000 !important;}
 
-    /* Cambia a blanco el texto de las páginas en el menú */
-    [data-testid="stSidebarNav"] span {color: #FFFFFF !important;}
+    /* Fondo claro */
+    [data-testid="stSidebar"] {
+        background-color: #F0F2F6 !important;}
 
     </style>
     """,
