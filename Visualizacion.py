@@ -48,6 +48,25 @@ except FileNotFoundError:
     )
 #--------------------------------------------------------------------------------------------------------
 
+#Configuración del color del texto 
+st.markdown(
+    """
+    <style>
+
+    /* Título principal */
+    h1 {color: #000000 !important;}
+
+    /* Encabezados secundarios */
+    h2 {color: #000000 !important;}
+
+    /* Subtítulos */
+    h3 {color: #000000 !important;}
+
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 #Desarrollo del contenido que tendrá la visualización en Streamlite
 #--------------------------------------------------------------------------------------------------------
 st.title("Minería de Datos para información SNIES")
