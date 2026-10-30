@@ -8,12 +8,13 @@ from pathlib import Path
 #----------------------------------------------
 
 st.title("Minería de Datos para información SNIES")
-st.header("Panel Principal")
 
-st.subheader("Integrantes del proyecto")
+st.header("Integrantes del proyecto:")
 st.write("Maryory Patricia Villamizar Leon: ID 273164")
 st.write("Silvia Alejandra Sotelo: ID 326379")
 st.write("Orlando Federico Gonzales Casallas: ID 159090")
+
+st.subheader("Panel Principal")
 
 # ===============================================
 # Informe de Análisis Exploratorio de Datos SNIES
