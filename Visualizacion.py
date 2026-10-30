@@ -13,14 +13,14 @@ st.set_page_config(page_title="Mineria_Datos",page_icon="👋",layout = "wide")
 
 #Estructura para colocar el fondo deseado en la visualización de Streamlit
 #-------------------------------------------------------------------------------------------------------
-def add_bg_from_local(image_file):
+def get_base64_image(image_path):
     with open(image_file, "rb") as image_file:
         encoded_string = base64.b64encode(image_file.read())
     return encoded_string
 
 #Cargar la imagen con manejo de excepciones
 try:
-    img_base64 = get_base64_image("SNIES Educativa Colombiana en Tonos Suaves.png")
+    img_base64 = get_base64_image("SNIES_Imagen.png")
 
     # 4. Inyectar el CSS usando la imagen codificada
     background_css = f"""
