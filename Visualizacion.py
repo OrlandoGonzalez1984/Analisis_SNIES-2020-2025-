@@ -63,7 +63,7 @@ st.markdown(
     h3 {color: #000000 !important;}
 
     /*para los demás textos*/
-    p, span, label {color: #000000 !important;}
+    p {color: #000000 !important;}
 
     /* Cambia a blanco el texto de las páginas en el menú */
     [data-testid="stSidebarNav"] span {color: #FFFFFF !important;}
