@@ -63,7 +63,7 @@ st.markdown(
     h3 {color: #000000 !important;}
 
     /*para los demás textos*/
-    p {color: #000000 !important;}
+    p, span, label {color: #000000 !important;}
 
     /* Fondo claro */
     [data-testid="stSidebar"] {
