@@ -73,7 +73,7 @@ st.markdown(
 
 #Sobre la página principal del proyecto
 pagina_principal = st.Page(
-    "paginas/pagina_principal.py",
+    "pagina_principal.py",
     title="Página Principal",
     icon="🏠",
     default=True
@@ -81,7 +81,7 @@ pagina_principal = st.Page(
 
 #Sobre la página secundaria (Presentación de Grafico de Serie de tiempo)
 pagina_2 = st.Page(
-    "paginas/series_tiempo.py",
+    "pagina_2.py",
     title="Series de Tiempo",
     icon="📈"
 )
