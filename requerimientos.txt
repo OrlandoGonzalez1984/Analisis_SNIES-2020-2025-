@@ -1,7 +1,8 @@
 streamlit
 base64
+pathlib
 pandas
+matplotlib
 scipy
 ydata-profiling
-matplotlib
 numpy
