@@ -63,8 +63,7 @@ st.markdown(
     h3 {color: #000000 !important;}
 
     /*para los demás textos*/
-     span, label {color: #000000 !important;}
-    .stText p {color: #000000 !important;}
+     p, span, label {color: #000000 !important;}
 
     </style>
     """,
