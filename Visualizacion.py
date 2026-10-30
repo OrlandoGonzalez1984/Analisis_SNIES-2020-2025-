@@ -62,6 +62,10 @@ st.markdown(
     /* Subtítulos */
     h3 {color: #000000 !important;}
 
+    /*para los demás textos*/
+     p, span, label {color: #000000 !important;}
+    .stText p {color: #000000 !important;}
+
     </style>
     """,
     unsafe_allow_html=True
