@@ -3,8 +3,8 @@ import base64
 import pandas as pd
 #import matplotlib.pyplot as plt
 import streamlit.components.v1 as components
-from scipy.io import arff
-from pathlib import Path
+#from scipy.io import arff
+#from pathlib import Path
 
 #Paso inicial para la configuración del título principal de visualización
 #-------------------------------------------------------------------------------------------
