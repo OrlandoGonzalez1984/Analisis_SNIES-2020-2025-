@@ -101,7 +101,7 @@ pagina_3 = st.Page(
 )
 
 #Sobre la página terciaria (Predicción con Técnicas de Serie de Tiempo)
-pagina_4 = st.page(
+pagina_4 = st.Page(
     "Predicción_Serie_Tiempo.py",
     title="Pronóstico de Series de Tiempo",
     icon="📈"
