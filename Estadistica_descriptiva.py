@@ -178,4 +178,68 @@ st.caption(
     "Indicadores calculados sobre las observaciones "
     "semestrales de 2020-1 a 2025-1. ")
 
+#Visualización de la gráfica de serie de tiempo para el periodo 2020-I a 2025-I
+#-------------------------------------------------------------------------------------------------
+st.divider()
+
+st.subheader("Series temporales de matrícula (2020-I a 2025-I)")
+
+# Transformar las 11 columnas en formato reconocible para verse en la gráfica
+#----------------------------------------------------------------------------
+series_temporales = datos_filtrados.melt(
+    id_vars=[
+        "CODIGO SNIES DEL PROGRAMA",
+        "PROGRAMA ACADEMICO"
+    ],
+    value_vars=periodos,
+    var_name="Periodo",
+    value_name="Matriculados")
+
+# Proceso para identificar cada programa académico
+series_temporales["Programa"] = (series_temporales["PROGRAMA ACADEMICO"].astype(str)+ " - SNIES "
+    + series_temporales["CODIGO SNIES DEL PROGRAMA"].astype(str))
+
+# Orden cronológico de los periodos para visualizar la gráfica
+series_temporales["Periodo"] = pd.Categorical(series_temporales["Periodo"],categories=periodos,ordered=True)
+series_temporales = series_temporales.sort_values(["Programa", "Periodo"])
+
+# Creación de la gráfica de serie de tiempo
+fig_series = px.line(
+    series_temporales,
+    x="Periodo",
+    y="Matriculados",
+    color="Programa",
+    markers=True,
+    title="Evolución semestral de la matrícula",
+    labels={
+        "Periodo": "Periodo académico",
+        "Matriculados": "Estudiantes matriculados",
+        "Programa": "Programa académico"})
+
+# Ajustes visualies de la gráfica en Streamlit
+fig_series.update_layout(
+    height=550,
+
+    font=dict(family="Arial",size=12,color="#000000"),
+
+    title=dict(x=0.5, xanchor="center",
+        font=dict(size=18, color="#000000")),
+
+    xaxis=dict(title="Periodo académico", type="category", categoryorder="array",categoryarray=periodos,
+        tickfont=dict(color="#000000")),
+
+    yaxis=dict(title="Número de estudiantes matriculados",tickfont=dict(color="#000000"),
+        rangemode="tozero"),
+
+    legend=dict(title="Programas académicos",orientation="h",
+        y=-0.25,x=0,
+        font=dict(size=11, color="#000000")),
+
+    hovermode="x unified",
+    plot_bgcolor="rgba(255,255,255,0.85)",
+    paper_bgcolor="rgba(255,255,255,0.80)",
+    margin=dict(l=60,r=40,t=80,b=80))
+
+# Código para que se visualice la gráfica en el espacio de streamlit, debajo de la tabla resumen de estadísticas
+st.plotly_chart(fig_series, use_container_width=True)
 
