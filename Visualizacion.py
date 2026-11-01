@@ -95,7 +95,7 @@ pagina_2 = st.Page(
 
 #Sobre la página secundaria (Presentación de Grafico de Serie de tiempo)
 pagina_3 = st.Page(
-    "Estadistica_descrciptiva.py",
+    "Estadistica_descriptiva.py",
     title="Descriptivas",
     icon="📈"
 )
