@@ -174,6 +174,9 @@ mejor_metodo = resultados.iloc[0]["Método"]
 
 mejor_pronostico = resultados.iloc[0]["Pronóstico 2025-II"]
 
+# Redondear el pronóstico al número entero de estudiantes
+mejor_pronostico_entero = int(np.floor(mejor_pronostico + 0.5))
+
 #Se selecciona por el mejor valor de error abosluto
 mejor_error = resultados.iloc[0]["Error absoluto"]
 
