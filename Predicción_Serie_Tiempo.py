@@ -41,8 +41,8 @@ def cargar_datos():
 #---------------------------------------------------------------------------------------------------------------
 st.title("Pronóstico de Matrícula Universitaria")
 
-st.markdown("""Comparación de tres técnicas de pronóstico:
-**Entrenamiento:** 2020-I a 2025-I (11 observaciones).
+st.markdown("""Comparación de tres técnicas de pronóstico: Naive, Promedio movil y Suavización Exponencial Simple""")
+st.markdown("""**Entrenamiento:** 2020-I a 2025-I (11 observaciones).
 **Evaluación:** matrícula real de 2025-II.""")
 
 datos_pronostico = cargar_datos()
