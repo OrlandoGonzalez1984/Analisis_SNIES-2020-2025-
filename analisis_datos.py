@@ -117,41 +117,45 @@ fig = px.bar(
 
 #Estructura de información, membretes y colores en el gráfico generado
 fig.update_layout(
-    height=max(500, len(datos) * 40),
 
-    # Configuración general de texto
-    font=dict(family="Arial",size=13,color="#000000"),
-    # Título principal
-    title_font=dict(size=20,color="#000000"),
+    # Altura dinámica
+    height=max(550, len(datos) * 42),
+    # Configuración general
+    font=dict(family="Arial", size=12,color="#000000"),
+
+    # Título
+    title=dict(
+        text=f"Matrícula en programas de ingeniería - {departamento} ({anio})",
+        font=dict(size=18, color="black"),
+        x=0.5,
+        xanchor="center"
+    ),
+
     # Eje horizontal
     xaxis=dict(
         title="Matrícula promedio semestral",
-        title_font=dict(size=14, color="#000000"),
-        tickfont=dict(size=12, color="#000000"),
+        tickfont=dict(size=12, color="black"),
+        title_font=dict(size=14, color="black"),
         showgrid=True,
         gridcolor="rgba(100,100,100,0.15)"
     ),
-    # Eje vertical: nombres de las ingenierías
-    yaxis=dict(
-        title="Programa académico",
-        title_font=dict(size=14, color="#000000"),
-        tickfont=dict(
-            family="Arial",
-            size=12,
-            color="#000000"
-        ),
-        automargin=True
-    ),
 
-    # Fondo del gráfico
-    plot_bgcolor="rgba(255,255,255,0.75)",
-    paper_bgcolor="rgba(255,255,255,0.65)",
+    # Eje vertical
+    yaxis=dict(
+        title=None,
+        tickfont=dict(size=11, color="black"),
+        automargin=True),
+
+    # Fondos
+    plot_bgcolor="rgba(255,255,255,0.85)",
+    paper_bgcolor="rgba(255,255,255,0.75)",
+
     # Ocultar escala de colores
     coloraxis_showscale=False,
-    # Márgenes para nombres largos
-    margin=dict(l=280,r=70,t=80,b=70)
-)
 
+    # Márgenes
+    margin=dict(l=20,r=80,t=100,b=70)
+)
 
 fig.update_traces(
     texttemplate="%{text:,.0f}",
