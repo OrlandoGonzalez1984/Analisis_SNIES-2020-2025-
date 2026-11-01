@@ -13,9 +13,9 @@ def preparar_estadisticas():
 
     # Establecer los oncen datos históricos sin incluir el periodo 2025-2
     periodos = [f"{ano}-{semestre}"
-        for anio in range(2020, 2026)
+        for ano in range(2020, 2026)
         for semestre in [1, 2]
-        if not (anio == 2025 and semestre == 2)]
+        if not (ano == 2025 and semestre == 2)]
 
     base[periodos] = base[periodos].apply(pd.to_numeric,errors="coerce")
     datos = base[periodos]
