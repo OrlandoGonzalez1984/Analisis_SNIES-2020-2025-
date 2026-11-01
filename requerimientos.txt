@@ -1,0 +1,9 @@
+streamlit
+base64
+pathlib
+pandas
+matplotlib
+scipy
+ydata-profiling
+plotly
+numpy
