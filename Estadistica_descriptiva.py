@@ -149,7 +149,30 @@ tabla.rename(
         "Desviacion": "Desviación estándar"
     }, inplace=True)
 
-st.dataframe(tabla.round(2),use_container_width=True,hide_index=True)
+st.dataframe(
+    tabla.round(2),
+    use_container_width=True,
+    hide_index=True,
+    height=350,
+    column_config={
+        "Programa académico": st.column_config.TextColumn(
+            "Programa académico",
+            width="large"
+        ),
+        "Código SNIES": st.column_config.NumberColumn(
+            "Código SNIES",
+            format="%d"
+        ),
+        "Media": st.column_config.NumberColumn(
+            "Media",
+            format="%.2f"
+        ),
+        "CV (%)": st.column_config.NumberColumn(
+            "CV (%)",
+            format="%.2f %%"
+        )
+    }
+)
 
 st.caption(
     "Indicadores calculados sobre las observaciones "
