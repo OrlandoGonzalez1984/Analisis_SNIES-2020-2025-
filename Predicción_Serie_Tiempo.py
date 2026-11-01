@@ -204,7 +204,7 @@ with col1:
 
 with col2:
 
-    st.metric("Mejor pronóstico",f"{mejor_pronostico:,.2f}")
+    st.metric("Mejor pronóstico",f"{mejor_pronostico_entero:,}")
 
 with col3:
 
@@ -368,7 +368,7 @@ st.write(
     f"del semestre 2025-II.")
 st.write(
     f"El valor pronosticado fue de "
-    f"**{mejor_pronostico:,.2f} estudiantes**, "
+    f"**{mejor_pronostico_entero:,} estudiantes**, "
     f"frente a un valor observado de "
     f"**{valor_real:,.0f} estudiantes**.")
 st.info(
