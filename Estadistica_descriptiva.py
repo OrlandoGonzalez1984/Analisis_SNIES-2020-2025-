@@ -225,22 +225,41 @@ fig_series.update_layout(
     title=dict(x=0.5, xanchor="center",
         font=dict(size=18, color="#000000")),
 
-    xaxis=dict(title=dict(text="Periodo académico",font=dict(size=14, color="#000000")), type="category", categoryorder="array",categoryarray=periodos,
-        tickfont=dict(size=12, color="#000000"),
+    xaxis=dict(
+    title=dict(
+        text="Periodo académico",
+        font=dict(size=14, color="#000000")
+    ),
+    type="category",
+    categoryorder="array",
+    categoryarray=periodos,
+    tickfont=dict(size=12, color="#000000")
+),
 
-    yaxis=dict(title=dict("Número de estudiantes matriculados", font=dict(size=14, color="#000000")),tickfont=dict(size=12, color="#000000"),
-        rangemode="tozero"),
+yaxis=dict(
+    title=dict(
+        text="Número de estudiantes matriculados",
+        font=dict(size=14, color="#000000")
+    ),
+    tickfont=dict(size=12, color="#000000"),
+    rangemode="tozero"
+),
 
-    legend=dict(title=dict(
+legend=dict(
+    title=dict(
         text="Programas académicos",
-        font=dict(size=13, color="#000000")),
-        y=-0.25,x=0,
-        font=dict(size=11, color="#000000")),
+        font=dict(size=13, color="#000000")
+    ),
+    orientation="h",
+    y=-0.25,
+    x=0,
+    font=dict(size=11, color="#000000")
+),
 
     hovermode="x unified",
     plot_bgcolor="rgba(255,255,255,0.85)",
     paper_bgcolor="rgba(255,255,255,0.80)",
-    margin=dict(l=60,r=40,t=80,b=80))
+    margin=dict(l=60,r=40,t=80,b=80)
 )
 # Código para que se visualice la gráfica en el espacio de streamlit, debajo de la tabla resumen de estadísticas
 st.plotly_chart(fig_series, use_container_width=True)
