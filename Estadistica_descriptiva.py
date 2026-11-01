@@ -48,10 +48,10 @@ def preparar_estadisticas():
     base["Q3"] = datos.quantile(0.75, axis=1)
     base["RIC"] = base["Q3"] - base["Q1"]
 
-    return base
+    return base, periodos
 
 #El objeto base guardar la información que se ha generado en la función preparar estadísticas
-base = preparar_estadisticas()
+base, periodos = preparar_estadisticas()
 
 #1.Visualización del título y descripción general de la información presentada
 #---------------------------------------------------------------------------------------------------------------------------
