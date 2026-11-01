@@ -57,26 +57,32 @@ st.markdown(
     f"""
     <style>
 
-    /* Logo centrado en la parte superior */
-    [data-testid="stMain"]::before {{
-        content: "";
-        display: block;
-        width: 220px;
-        height: 110px;
+    .logo-upb {{
+        position: relative;
+        z-index: 10;
 
-        background-image:
-            url("data:image/png;base64,{logo_base64}");
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 10px auto 25px auto;
+    }}
 
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-
-        margin: 20px auto 10px auto;
+    .logo-upb img {{
+        width: 200px;
+        height: auto;
+        max-width: 100%;
+        object-fit: contain;
     }}
 
     </style>
+
+    <div class="logo-upb">
+        <img src="data:image/png;base64,{logo_base64}">
+    </div>
     """,
-    unsafe_allow_html=True)
+    unsafe_allow_html=True
+)
 #--------------------------------------------------------------------------------------------------------
 
 #Configuración del color de barra de navegación y texto (CSS)
