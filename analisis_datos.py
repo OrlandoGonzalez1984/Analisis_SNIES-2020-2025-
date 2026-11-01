@@ -125,7 +125,7 @@ fig.update_layout(
 
     # Título
     title=dict(
-        text=f"Matrícula en programas de ingeniería - {departamento} ({anio})",
+        text=f"Matrícula en programas de ingeniería - {departamento} ({ano})",
         font=dict(size=18, color="black"),
         x=0.5,
         xanchor="center"
