@@ -2,9 +2,9 @@ import streamlit as st
 import base64
 from pathlib import Path
 import pandas as pd
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import streamlit.components.v1 as components
-from scipy.io import arff
+#from scipy.io import arff
 
 #Paso inicial para la configuración del título principal de visualización
 #-------------------------------------------------------------------------------------------
