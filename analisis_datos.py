@@ -117,14 +117,41 @@ fig = px.bar(
 
 #Estructura de información, membretes y colores en el gráfico generado
 fig.update_layout(
-    height=max(500, len(datos) * 35),
-    font=dict(color="black"),
-    title_font=dict(size=18, color="black"),
-    xaxis_title="Matrícula promedio semestral",
-    yaxis_title="Programa académico",
+    height=max(500, len(datos) * 40),
+
+    # Configuración general de texto
+    font=dict(family="Arial",size=13,color="#000000"),
+    # Título principal
+    title_font=dict(size=20,color="#000000"),
+    # Eje horizontal
+    xaxis=dict(
+        title="Matrícula promedio semestral",
+        title_font=dict(size=14, color="#000000"),
+        tickfont=dict(size=12, color="#000000"),
+        showgrid=True,
+        gridcolor="rgba(100,100,100,0.15)"
+    ),
+    # Eje vertical: nombres de las ingenierías
+    yaxis=dict(
+        title="Programa académico",
+        title_font=dict(size=14, color="#000000"),
+        tickfont=dict(
+            family="Arial",
+            size=12,
+            color="#000000"
+        ),
+        automargin=True
+    ),
+
+    # Fondo del gráfico
+    plot_bgcolor="rgba(255,255,255,0.75)",
+    paper_bgcolor="rgba(255,255,255,0.65)",
+    # Ocultar escala de colores
     coloraxis_showscale=False,
-    plot_bgcolor="rgba(0,0,0,0)",
-    paper_bgcolor="rgba(0,0,0,0)")
+    # Márgenes para nombres largos
+    margin=dict(l=280,r=70,t=80,b=70)
+)
+
 
 fig.update_traces(
     texttemplate="%{text:,.0f}",
