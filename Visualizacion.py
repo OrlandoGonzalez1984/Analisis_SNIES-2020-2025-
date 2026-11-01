@@ -48,6 +48,37 @@ except FileNotFoundError:
     )
 #--------------------------------------------------------------------------------------------------------
 
+#Ubicación del logo institucional de la UPB
+#--------------------------------------------------------------------------------------------------------
+with open("UPB_colombia.png", "rb") as imagen:
+    logo_base64 = base64.b64encode(imagen.read()).decode()
+
+st.markdown(
+    f"""
+    <style>
+
+    /* Logo centrado en la parte superior */
+    [data-testid="stMain"]::before {{
+        content: "";
+        display: block;
+        width: 220px;
+        height: 110px;
+
+        background-image:
+            url("data:image/png;base64,{logo_base64}");
+
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        margin: 20px auto 10px auto;
+    }}
+
+    </style>
+    """,
+    unsafe_allow_html=True)
+#--------------------------------------------------------------------------------------------------------
+
 #Configuración del color de barra de navegación y texto (CSS)
 st.markdown(
     """
