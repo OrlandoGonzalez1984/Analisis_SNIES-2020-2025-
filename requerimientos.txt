@@ -5,5 +5,5 @@ pandas
 matplotlib
 scipy
 ydata-profiling
-plotly.express
+plotly
 numpy
